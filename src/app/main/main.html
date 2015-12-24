@@ -1,17 +1,30 @@
 <div layout="vertical" layout-fill>
 
-  <md-content layout-fill>
+  <div layout-fill>
     <header>
       <acme-navbar></acme-navbar>
     </header>
 
-    <section class="jumbotron">
-      <h1>Hello World</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-    </section>
-  </md-content>
+    <div class="main-body">
+
+      <div ng-if="!main.clients">
+        <div layout="row" layout-sm="column" layout-align="space-around">
+          <md-progress-circular class="md-warn md-hue-3" md-mode="indeterminate"></md-progress-circular>
+        </div>
+      </div>
+
+      <div ng-if="main.clients">
+        <h1> Current Clients </h1>
+        <md-list-item class="md-2-line" ng-repeat="client in main.clients">
+          <md-icon style="font-size: 40px;" md-font-icon="account_circle" aria-label="account_circle">account_circle</md-icon>
+          <div class="md-list-item-text" ng-class="{'md-offset': $index == 2 }">
+            <h3> {{ client.firstName + ' ' + client.lastName }} </h3>
+            <p> {{ client.email }} </p>
+          </div>
+        </md-list-item>
+      </div>
+
+    </div>
+  </div>
 
 </div>

@@ -6,7 +6,11 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController() {
-    var vm = this;    
+  function MainController(clientsAPI) {
+    var vm = this;
+
+    clientsAPI.getClients().then(function (response) {
+      vm.clients = response.data;
+    });
   }
 })();
