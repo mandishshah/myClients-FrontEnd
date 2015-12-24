@@ -2,16 +2,13 @@
   'use strict';
 
   angular
-    .module('angularProject', [
-      'ngAnimate', 
-      'ngTouch', 
-      'ngSanitize', 
-      'ngMessages', 
-      'ui.router', 
-      'ngMaterial', 
-      'toastr', 
-      'time-now',
-      'multi-filter-list'
+    .module('myClients', [
+      'ngAnimate',
+      'ngTouch',
+      'ngSanitize',
+      'ngMessages',
+      'ui.router',
+      'ngMaterial'
     ]);
 
 })();
