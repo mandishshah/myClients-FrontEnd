@@ -9,7 +9,7 @@
   function MainController(clientsAPI) {
     var vm = this;
 
-    clientsAPI.getClients().then(function (response) {
+    clientsAPI.getClients().then(function(response) {
       vm.clients = response.data;
     });
   }
