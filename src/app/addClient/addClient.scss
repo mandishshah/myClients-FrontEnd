@@ -1,0 +1,23 @@
+.addClient-body {
+  margin-bottom: 30px;
+  padding: 1px 30px 50px;
+  background-color: #5aadbb;
+  color: white;
+}
+.addClient-form {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.addClient-body .inputIconDemo {
+  min-height: 48px;
+}
+.addClient-body md-input-container:not(.md-input-invalid) > md-icon.email {
+  color: green;
+}
+.addClient-body md-input-container:not(.md-input-invalid) > md-icon.name {
+  color: dodgerblue;
+}
+.addClient-body md-input-container.md-input-invalid > md-icon.email,
+.addClient-body md-input-container.md-input-invalid > md-icon.name {
+  color: red;
+}

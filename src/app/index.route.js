@@ -13,6 +13,12 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
+      })
+      .state('addClient', {
+        url: '/addClient',
+        templateUrl: 'app/addClient/addClient.html',
+        controller: 'AddClientController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');
