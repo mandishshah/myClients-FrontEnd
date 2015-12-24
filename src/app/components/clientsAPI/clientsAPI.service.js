@@ -11,6 +11,9 @@
     return {
       getClients: function () {
         return $http.get(baseURL + '/clients');
+      },
+      AddClient: function (client) {
+        return $http.post(baseURL + '/clients', client);
       }
     };
   }
