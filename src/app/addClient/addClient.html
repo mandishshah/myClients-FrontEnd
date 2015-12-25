@@ -1,35 +1,36 @@
 <div layout="column" class="addClient-body">
   <h1> Add Client </h1>
   <br>
+  <center ng-if="vm.notificationMessage"><h3>{{vm.notificationMessage}}</h3></center>
   <md-content class="addClient-form">
     <form name="addClient">
       <md-input-container class="md-icon-float md-block">
         <label>First Name</label>
         <md-icon md-font-icon="person" aria-label="person" class="name">person</md-icon>
-        <input ng-model="client.firstName" type="text" ng-required="true">
+        <input ng-model="vm.client.firstName" type="text" ng-required="true">
       </md-input-container>
 
       <md-input-container class="md-icon-float md-block">
         <label>Last Name</label>
         <md-icon md-font-icon="person" aria-label="person" class="name">person</md-icon>
-        <input ng-model="client.lastName" type="text" ng-required="true">
+        <input ng-model="vm.client.lastName" type="text" ng-required="true">
       </md-input-container>
 
       <md-input-container md-no-float="" class="md-block">
         <md-icon md-font-icon="phone" aria-label="phone">phone</md-icon>
-        <input ng-model="client.phone" type="text" placeholder="Phone Number" ng-required="true">
+        <input ng-model="vm.client.phone" type="text" placeholder="Phone Number" ng-required="true">
       </md-input-container>
 
       <md-input-container class="md-block">
         <!-- Use floating placeholder instead of label -->
         <md-icon md-font-icon="email" aria-label="email" class="email">email</md-icon>
-        <input ng-model="client.email" type="email" placeholder="Email (required)" ng-required="true">
+        <input ng-model="vm.client.email" type="email" placeholder="Email (required)" ng-required="true">
       </md-input-container>
     </form>
   </md-content>
 
   <center>
-    <md-button ng-disabled="!addClient.$valid" class="md-raised" ng-click="vm.saveClient(client)">Save Client</md-button>
+    <md-button ng-disabled="!addClient.$valid" class="md-raised" ng-click="vm.saveClient(vm.client)">Save Client</md-button>
   </center>
 
 </div>
